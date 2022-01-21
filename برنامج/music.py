@@ -39,7 +39,7 @@ async def ytdl(format: str, link: str):
     return 0, stderr
 
 
-@Client.on_message(command(["mplay", f"mplay@{BOT_USERNAME}", "شغل", "ديشا"]) & other_filters)
+@  العميل . on_message ( الأمر ([ "mplay"  ،  f  "mplay @ {BOT_USERNAME}"vplay" ،  "شغل"  ،  "play" ]) &  other_filters )
 async def play(c: Client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -127,12 +127,12 @@ async def play(c: Client, m: Message):
                 await suhu.delete()
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **تمت إضافة المسار إلى قائمة الانتظار »** `{pos}`\n\n🏷 **اسم:** [{songname}]({link})\n💭 **شات:** `{chat_id}`\n🎧 **مطلوبه بواسطة:** {m.from_user.mention()}",
+                    caption=f"💡 **تمت إضافة المسار إلى قائمة يقلبي💕 »** `{pos}`\n\n🏷 **اسم:** [{songname}]({link})\n💭 **شات:** `{chat_id}`\n🎧 **مطلوبه بواسطة:** {m.from_user.mention()}",
                     reply_markup=keyboard,
                 )
             else:
              try:
-                await suhu.edit("🔄 **جاري التحميل قليلا**")
+                await suhu.edit("🔄 **جاري التحميل يقلبي💕**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioPiped(
@@ -157,7 +157,7 @@ async def play(c: Client, m: Message):
                     "» الرد علي **ملف صوتي** او **إعطاء شيء للبحث.**"
                 )
             else:
-                suhu = await c.send_message(chat_id, "🔍 **جاري البحث**")
+                suhu = await c.send_message(chat_id, "🔍 **ويت يقلبي💕**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -185,7 +185,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("🔄 **تم التشغيل 💕**")
+                                await suhu.edit("🔄 **تم التشغيل يقلبي💕💕**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -211,7 +211,7 @@ async def play(c: Client, m: Message):
                 "» الرد علي **ملف صوتي** او **إعطاء شيء للبحث.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "🔍 **جاري البحث**")
+            suhu = await c.send_message(chat_id, "🔍 ** ويت يقلبي💕**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -239,7 +239,7 @@ async def play(c: Client, m: Message):
                         )
                     else:
                         try:
-                            await suhu.edit("🔄 **تم التشغيل 💕...**")
+                            await suhu.edit("🔄 ** تم التشغيل يقلبي💕💕...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
